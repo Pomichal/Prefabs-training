@@ -5,12 +5,11 @@ using UnityEngine;
 public class ObstacleBehaviour : MonoBehaviour
 {
 
-    public float speedUp;
+    public float speed;
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position += Vector3.up * speedUp;
+        transform.position += new Vector3(0, speed, 0);
 
         if(transform.position.y > 10)
         {
